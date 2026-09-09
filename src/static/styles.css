@@ -32,6 +32,21 @@
   --info-light: #d1ecf1;
 }
 
+body.dark-mode {
+  --background: #121212;
+  --surface: #1f1f1f;
+  --text-primary: #f5f5f5;
+  --text-secondary: #bdbdbd;
+  --border: #3a3a3a;
+  --border-light: #2b2b2b;
+  --border-focus: #666666;
+  --primary-light: #7986cb;
+  --success-light: #1b3a20;
+  --warning-light: #4a3600;
+  --error-light: #4a1d1d;
+  --info-light: #173d43;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -48,6 +63,11 @@ body {
   padding: 12px;
   background-color: var(--background);
   font-size: 0.9rem;
+}
+
+input {
+  background-color: var(--surface);
+  color: var(--text-primary);
 }
 
 header {
@@ -617,6 +637,9 @@ footer {
   position: absolute;
   top: 10px;
   right: 15px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
 }
 
 #user-status {
@@ -648,6 +671,14 @@ footer {
 
 .icon-button:hover {
   background-color: rgba(255, 255, 255, 0.3);
+}
+
+.theme-toggle {
+  width: 32px;
+  height: 30px;
+  justify-content: center;
+  padding: 4px;
+  font-size: 1.1rem;
 }
 
 .user-icon {
